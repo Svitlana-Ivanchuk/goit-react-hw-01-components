@@ -1,4 +1,4 @@
-export const Stats = ({ data: { label, percentage } }) => {
+export const Stats = ({ item: { label, percentage } }) => {
   return (
     <>
       <span class="label">{label}</span>

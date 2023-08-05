@@ -1,14 +1,14 @@
 import { Stats } from './Stats';
 
-export const Statistics = ({ dataItems }) => {
+export const Statistics = ({ data }) => {
   return (
     <section class="statistics">
       <h2 class="title">Upload stats</h2>
 
       <ul class="stat-list">
-        {dataItems.map(data => (
-          <li key={data.id} class="item">
-            <Stats data={data} />
+        {data.map(item => (
+          <li key={item.id} class="item">
+            <Stats item={item} />
           </li>
         ))}
       </ul>
