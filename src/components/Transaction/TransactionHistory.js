@@ -1,16 +1,15 @@
 import { TableBody } from './TableBody';
-import { TableHead } from './TableHead';
 
 export const TransactionHistory = ({ items }) => {
   return (
     <div>
       <table class="transaction-history">
         <thead>
-          <TableHead
-            type={items.type}
-            amount={items.amount}
-            currency={items.currency}
-          />
+          <tr>
+            <th>type</th>
+            <th>amount</th>
+            <th>currency</th>
+          </tr>
         </thead>
 
         <tbody>

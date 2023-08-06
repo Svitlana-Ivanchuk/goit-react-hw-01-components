@@ -1,4 +1,4 @@
-export const TableBody = ({ type, amount, currency }) => {
+export const TableBody = ({ item: { type, amount, currency } }) => {
   return (
     <>
       <td>{type}</td>

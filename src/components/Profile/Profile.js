@@ -1,10 +1,12 @@
 import { Description } from './Description';
+import { Topic } from './Profile.styled';
 import { UserStats } from './UserStats';
 
 export const Profile = ({ user }) => {
   return (
-    <section class="profile">
-      <h2 class="title">Profile</h2>
+    <section>
+      <Topic>Profile</Topic>
+
       <Description
         username={user.username}
         tag={user.tag}
