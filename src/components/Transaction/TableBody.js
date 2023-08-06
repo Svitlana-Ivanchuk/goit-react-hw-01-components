@@ -1,9 +1,11 @@
+import { TableCell } from './TableBody.styles';
+
 export const TableBody = ({ item: { type, amount, currency } }) => {
   return (
     <>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
+      <TableCell>{type}</TableCell>
+      <TableCell>{amount}</TableCell>
+      <TableCell>{currency}</TableCell>
     </>
   );
 };

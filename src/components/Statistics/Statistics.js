@@ -1,17 +1,18 @@
+import { Container, Item, StatsList, Topic } from './Statistics.styled';
 import { Stats } from './Stats';
 
 export const Statistics = ({ data }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+    <Container>
+      <Topic>Upload stats</Topic>
 
-      <ul class="stat-list">
+      <StatsList>
         {data.map(item => (
-          <li key={item.id} class="item">
+          <Item key={item.id} label={item.label}>
             <Stats item={item} />
-          </li>
+          </Item>
         ))}
-      </ul>
-    </section>
+      </StatsList>
+    </Container>
   );
 };

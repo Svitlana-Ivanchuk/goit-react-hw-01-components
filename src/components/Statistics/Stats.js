@@ -1,8 +1,10 @@
+import { Label, Percentage } from './Stats.styled';
+
 export const Stats = ({ item: { label, percentage } }) => {
   return (
     <>
-      <span class="label">{label}</span>
-      <span class="percentage"> {percentage}% </span>
+      <Label>{label}</Label>
+      <Percentage> {percentage}% </Percentage>
     </>
   );
 };
