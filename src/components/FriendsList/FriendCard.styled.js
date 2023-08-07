@@ -5,7 +5,7 @@ export const Status = styled.span`
   align-items: center;
   border: 1px solid #303030;
   border-radius: 50%;
-  background-color: ${props => (props.status === true ? 'green' : 'red')};
+  background-color: ${props => (props.status === 'true' ? 'green' : 'red')};
   width: 20px;
   height: 20px;
 `;
