@@ -1,13 +1,13 @@
-import { Container, Item, StatsList } from './Statistics.styled';
+import { Container, Item, StatsList, Title } from './Statistics.styled';
 import { Stats } from './Stats';
-import { TopicStats } from './TopicStats';
+import PropTypes from 'prop-types';
 
-export const Statistics = ({ data }, text) => {
+export const Statistics = ({ stats, title }) => {
   return (
     <Container>
-      <TopicStats text="Upload stats">{text && '...'}</TopicStats>
+      {title && <Title>{title}</Title>}
       <StatsList>
-        {data.map(item => (
+        {stats.map(item => (
           <Item key={item.id} label={item.label}>
             <Stats item={item} />
           </Item>
@@ -15,4 +15,14 @@ export const Statistics = ({ data }, text) => {
       </StatsList>
     </Container>
   );
+};
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+  title: PropTypes.string.isRequired,
 };

@@ -1,7 +1,7 @@
 import { Description } from './Description';
 import { Topic } from './Profile.styled';
 import { UserStats } from './UserStats';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const Profile = ({ user }) => {
   return (
@@ -19,18 +19,6 @@ export const Profile = ({ user }) => {
   );
 };
 
-//Profile.propTypes = {
-//  user: PropTypes.arrayOf(
-//    PropTypes.exact({
-//      username: PropTypes.string.isRequired,
-//      tag: PropTypes.string.isRequired,
-//      location: PropTypes.string.isRequired,
-//      avatar: 'https://cdn-icons-png.flaticon.com/512/2922/2922506.png',
-//      stats: {
-//        followers: PropTypes.number.isRequired,
-//        views: PropTypes.number.isRequired,
-//        likes: PropTypes.number.isRequired,
-//      },
-//    })
-//  ),
-//};
+Profile.propTypes = {
+  user: PropTypes.object,
+};

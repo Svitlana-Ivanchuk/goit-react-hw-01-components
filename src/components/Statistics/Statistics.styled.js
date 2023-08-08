@@ -42,3 +42,15 @@ export const Item = styled.li`
   border: 1px solid #303030;
   padding: 8px 16px;
 `;
+export const Title = styled.h2`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  padding: 24px;
+`;
+
+

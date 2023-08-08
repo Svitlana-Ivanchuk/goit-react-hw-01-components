@@ -1,4 +1,5 @@
 import { Label, Stats, StatsItem } from './UserStats.styled';
+import PropTypes from 'prop-types';
 
 export const UserStats = ({ stats: { followers, views, likes } }) => {
   return (
@@ -17,4 +18,12 @@ export const UserStats = ({ stats: { followers, views, likes } }) => {
       </StatsItem>
     </Stats>
   );
+};
+
+UserStats.propTypes = {
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
